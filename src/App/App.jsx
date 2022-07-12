@@ -8,14 +8,11 @@ import "./App.css";
 const App = () => {
   const [products, setProducts] = useState([]);
   const [cartItems, setCartItem] = useState([]);
-  const [option, setFilterOption] = useState("ALL");
+  const [option, setFilterOption] = useState("all");
   const [isLoading, setIsLoading] = useState(false);
 
   const setOption = (name) => {
-    console.log(name);
-    const filtredProducts = products.filter((product) => product.TYPE === name);
-    console.log(products.filter((product) => product.TYPE === "fence"));
-    // setProducts(filtredProducts);
+    setFilterOption(name);
   };
 
   const addToCart = (product, qty = 1) => {
@@ -54,11 +51,16 @@ const App = () => {
     });
   }, []);
 
+  const filtredProducts =
+    option === "all"
+      ? products
+      : products.filter((product) => product.TYPE === option);
+
   if (isLoading) return <div>Загрузка</div>;
   return (
     <div className="app">
       <Header setOption={setOption} />
-      <Catalog products={products} addToCart={addToCart} />
+      <Catalog products={filtredProducts} addToCart={addToCart} />
       <Cart
         cartItems={cartItems}
         removeFromCart={removeFromCart}

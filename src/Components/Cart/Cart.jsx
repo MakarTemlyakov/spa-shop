@@ -37,7 +37,7 @@ const Cart = ({ cartItems, removeFromCart, addToCart, minusItem }) => {
                   ))}
                   <tr>
                     <td colSpan={3}>Итого:</td>
-                    <td colSpan={2}>{totalPriceCart.toFixed(2)}</td>
+                    <td colSpan={2}>${totalPriceCart.toFixed(2)}</td>
                   </tr>
                 </tbody>
               </table>
