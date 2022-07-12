@@ -1,0 +1,29 @@
+.product-sku {
+  background-color: #dfdfdf;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.product-sku__name {
+  font-size: 14px;
+}
+
+.product-sku-active {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.product-sku:hover {
+  cursor: pointer;
+  background-color: #dfdfdf;
+}
