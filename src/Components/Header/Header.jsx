@@ -20,7 +20,7 @@ const Header = ({ setOption }) => {
               <option value={"fence"}>FENCE</option>
               <option value={"fix"}>FIX</option>
               <option value={"post"}>POST</option>
-              <option value={"rail"}>POST</option>
+              <option value={"rail"}>Rail</option>
               <option value={"plug"}>PLUG</option>
             </select>
           </div>
